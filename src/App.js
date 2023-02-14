@@ -3,6 +3,8 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import Map, { Marker, NavigationControl, GeolocateControl } from "react-map-gl";
 import { useState, useEffect } from "react";
 import styled from 'styled-components'
+import Header from "./components/Header";
+import BurgerMenu from "./components/BurgerMenu";
 
 
 
@@ -11,6 +13,7 @@ function App() {
   const [chosenCountry, setChosenCountry] = useState('all');
   const [chosenCity, setChosenCity] = useState('all');
   const [chosenCompany, setChosenCompany] = useState('all');
+  const [burger, setBurger] = useState(false)
 
   useEffect(() => {
     async function fetchData() {
@@ -43,14 +46,17 @@ function App() {
 
   return (
     <Contianer className="App">
-      <h2>this is a mapbox</h2>
+      <Header burger={burger} setBurger={setBurger} />
+     {burger && <BurgerMenu burger={burger} setBurger={setBurger} />} 
       <Map
         mapboxAccessToken="pk.eyJ1IjoiemFuZ3VyYSIsImEiOiJjbGUybnM3YW8wMG92M29xajNkaXFnMXhwIn0.5mKLHHR16BxcqzVViKNVqg"
         style={{
-          width: "500px",
+          maxWidth: "900px",
           height: "500px",
           borderRadius: "15px",
           border: "2px solid red",
+          boxSizing: "border-box",
+          padding: "10px"
         }}
         mapStyle="mapbox://styles/mapbox/streets-v9" >
         {filteredByCompany.map((item, index) => {
@@ -129,6 +135,7 @@ function App() {
 export default App;
 
 const Contianer = styled.div`
+padding: 0 20px;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
@@ -138,8 +145,14 @@ height: 100vh;
 
 const SelectContainer = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
+  select {
+    width: 200px;
+    border-radius: 10px;
+    padding: 10px;
+  }
 `
 
 const Cont = styled.div`
