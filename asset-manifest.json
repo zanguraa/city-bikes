@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/city-bikes/static/css/main.cdf3ec8a.css",
+    "main.css": "/city-bikes/static/css/main.835f2d03.css",
     "main.js": "/city-bikes/static/js/main.f29eb203.js",
     "static/js/483.f0aa54fd.chunk.js": "/city-bikes/static/js/483.f0aa54fd.chunk.js",
     "static/media/bicycle-solid.svg": "/city-bikes/static/media/bicycle-solid.387b3acdfe13b2ef031e387cc83f180c.svg",
     "index.html": "/city-bikes/index.html",
     "static/media/bars-solid.svg": "/city-bikes/static/media/bars-solid.69707d7401c01382651c5c630dc731f2.svg",
     "static/media/xmark-solid.svg": "/city-bikes/static/media/xmark-solid.5ef1222a816bde743a175e947811d385.svg",
-    "main.cdf3ec8a.css.map": "/city-bikes/static/css/main.cdf3ec8a.css.map",
+    "main.835f2d03.css.map": "/city-bikes/static/css/main.835f2d03.css.map",
     "main.f29eb203.js.map": "/city-bikes/static/js/main.f29eb203.js.map",
     "483.f0aa54fd.chunk.js.map": "/city-bikes/static/js/483.f0aa54fd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdf3ec8a.css",
+    "static/css/main.835f2d03.css",
     "static/js/main.f29eb203.js"
   ]
 }
